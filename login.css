@@ -1,0 +1,113 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}  
+
+a:link {
+    
+    background-color: rgb(218, 194, 62);
+    color: white;
+    padding: 15px 25px;
+    font-family: fantasy;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#submitLoginButton {
+    background-color: rgb(218, 194, 62);
+    color: white;
+    padding: 5px 5px;
+    font-family: fantasy;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+h1, .fontclass {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+
+#logout {
+    background-color: rgb(218, 194, 62);
+    color: white;
+    padding: 5px 5px;
+    font-family: fantasy;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.button {
+    background-color: #af4c86ee;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+body {
+    background-color: rgba(86, 151, 211, 0.671);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .image1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .image2 {
+    position: absolute;
+    top: 300px;
+    left: 500px;
+
+  }
+  .parent .btn {
+    position: absolute;
+    top: 300px;
+    left: 500px;
+
+    width: 80px;
+    height: 80px;
+    background: transparent;
+ 
+  }
+
+  p {
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: rgb(30, 75, 72);
+  }
+
+ 

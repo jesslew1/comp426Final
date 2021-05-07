@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <link href="day.css" type="text/css" rel="stylesheet"/>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src = node_modules/jquery/dist/jquery.js></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>   
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    </head>
+    <body onload = "setupAchievment()">
+        <div class>
+            <div id = "achievementDiv">
+            <P> What Days Have You Completed? </P>
+            <img id = "day1" class = "grey" src = "Pictures/Achievements/Complete_Day_1.png"  width = "5%" alt = "Day 1 Completed">
+            <img id = "day2" class = "grey" src = "Pictures/Achievements/Complete_Day_2.png"  width = "5%" alt = "Day 2 Completed">
+            <img id = "day3"  class = "grey" src = "Pictures/Achievements/Complete_Day_3.png"  width = "5%" alt = "Day 3 Completed ">
+            <img id  = "day4" class = "grey" src = "Pictures/Achievements/Complete_Day_4.png" width = "5%" alt = "Day 4 Completed ">
+            <P> Who have you Befriended?</P>
+            <img  id = "befriend_jonna" class = "grey" src = "jonna.png" width = "5%" alt = "befriended jonna">
+            <img id = "befriend_grady" class = "grey" src = "grady.png"  width = "5%" alt = "befriended grady">
+            <img  id = "befriend_riley" class = "grey" src = "riley.png" width = "5%" alt = "befriended riley">
+            <img id = "befriend_oliver" class = "grey" src = "oliver.png" width = "5%" alt = "befriended oliver">
+            <img id = "befriend_brittney" class = "grey" src = "b"  width = "5%" alt = "befriended brittney">
+            <img id = "befriend_ellie" class = "grey" src = "ellie.png" width = "5%" alt = "befriended ellie">
+            <img id = "befriend_mia" class = "grey" src = "mia.png" width = "5%" alt = "befriended Mia">
+            </div>
+            <h1> Total Score = <span> </span> </h1>
+            <script>
+                var score = 0;
+                $("span").append(score); 
+            </script>
+            <a href="day4.html" class="center">Go to Day 4</a>
+         </div>
+
+         <script>
+            var firebaseConfig = {
+          apiKey: "AIzaSyC2A7eipZGRsxIo22mw5xMzmq25YM48H4w",
+          authDomain: "camp-northway.firebaseapp.com",
+          databaseURL: "https://camp-northway.firebaseio.com",
+          projectId: "camp-northway",
+          storageBucket: "camp-northway.appspot.com",
+          messagingSenderId: "708573748105",
+          appId: "1:708573748105:web:58c9472ff180ad88525f58",
+          measurementId: "G-R66WBWPQKM"
+        };
+        if(!firebase.apps.length){
+        firebase.initializeApp(firebaseConfig);
+        }
+        firebase.analytics();
+
+        const authentication = firebase.auth();
+        const database = firebase.database();
+
+        authentication.onAuthStateChanged(user => {
+    if(user != null){
+        uid = user.uid
+        console.log("Your uid is:  " +user.uid);
+    }
+})
+</script> 
+         <script src = "retrievedata.js"></script> 
+        <script>
+            function setupAchievment(){
+
+                playersRef.orderByChild("email").equalTo(Cookies.get("Email")).on("child_added", function(data) {
+                    var newscore = 0;
+                    var day1
+                    var day1points = 0;
+                    day1 = data.val().day1;
+                    if (day1) {
+                        document.getElementById("day1").className = "";
+                         day1points = 100;
+                    }
+                    var day2
+                    day2 = data.val().day2;
+                    var day2points = 0;
+                    if (day2) {
+                        document.getElementById("day2").className = "";
+                        day2points = 100;
+                    }   
+                    var day3
+                    day3 = data.val().day3;
+                    var day3points = 0;
+                    if (day3) {
+                        document.getElementById("day3").className = "";
+                         day3points = 100;
+                    }
+                    var day4
+                    day4 = data.val().day4;
+                    var day4points = 0;
+                    if (day4) {
+                        document.getElementById("day4").className = "";
+                         day4points = 100;
+                    }   
+                    var befriend_jonna
+                    befriend_jonna = data.val().befriend_jonna;
+                    var jonna_points = 0;
+                    if (befriend_jonna) {
+                        document.getElementById("befriend_jonna").className = "";
+                         jonna_points = 100;
+                    }
+                    var befriend_grady;
+                    befriend_grady = data.val().befriend_grady;
+                    var grady_points = 0;
+                    if (befriend_grady) {
+                        document.getElementById("befriend_grady").className = "";
+                         grady_points = 100;
+                    }   
+                    var befriend_brittney;
+                    befriend_brittney = data.val().befriend_brittney
+                    var brittney_points  = 0;
+                    if (befriend_brittney) {
+                        document.getElementById("befriend_brittney").className = "";
+                        brittney_points = 100;
+                    }
+                    var befriend_ellie
+                    befriend_ellie = data.val().befriend_ellie;
+                    var ellie_points = 0;
+                    if (befriend_ellie) {
+                        document.getElementById("befriend_ellie").className = "";
+                       
+                        ellie_points = 100;
+                    }    
+                    var befriend_mia;
+                    befriend_mia = data.val().befriend_mia;
+                    var mia_points = 0;
+                    if (befriend_mia) {
+                        document.getElementById("befriend_mia").className = "";
+                        
+                         mia_points = 100;
+                    }   
+                    var befriend_oliver;
+                    befriend_oliver = data.val().befriend_oliver
+                    var oliver_points = 0;
+                    if (befriend_oliver) {
+                        document.getElementById("befriend_oliver").className = "";
+                         oliver_points = 100;
+
+                    }
+                    var befriend_riley
+                    befriend_riley = data.val().befriend_riley
+                    var riley_points = 0;
+                    if (befriend_riley) {
+                        document.getElementById("befriend_riley").className = "";
+                        riley_points = 100;
+                    }         
+                    newscore = (day1points + day2points + day3points + day4points + jonna_points + riley_points + oliver_points + mia_points + ellie_points + brittney_points + grady_points);
+                  
+                    $("span").replaceWith(newscore);                
+                });                
+                
+            }
+        </script>
+    </body>
+</html>

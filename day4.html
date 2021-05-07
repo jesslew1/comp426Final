@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="day4.css" type="text/css" rel="stylesheet"/>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src = node_modules/jquery/dist/jquery.js></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>   
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    </head>
+    <body>
+      <script>
+        var firebaseConfig = {
+      apiKey: "AIzaSyC2A7eipZGRsxIo22mw5xMzmq25YM48H4w",
+      authDomain: "camp-northway.firebaseapp.com",
+      databaseURL: "https://camp-northway.firebaseio.com",
+      projectId: "camp-northway",
+      storageBucket: "camp-northway.appspot.com",
+      messagingSenderId: "708573748105",
+      appId: "1:708573748105:web:58c9472ff180ad88525f58",
+      measurementId: "G-R66WBWPQKM"
+    };
+    if(!firebase.apps.length){
+    firebase.initializeApp(firebaseConfig);
+    }
+    firebase.analytics();
+
+    const authentication = firebase.auth();
+    const database = firebase.database();
+
+    authentication.onAuthStateChanged(user => {
+if(user != null){
+    uid = user.uid
+    console.log("Your uid is:  " +user.uid);
+}
+})
+
+
+</script>
+<script src = "retrievedata.js"></script>
+<script src = "update.js"></script>
+    <script>
+
+function getName() {
+playersRef.orderByChild("email").equalTo(Cookies.get("Email")).on("child_added", function(data) {
+    
+    $("p:first").prepend(data.val().name + ", ");
+
+ });
+}
+getName();
+</script>
+
+        <h1>Day 4:</h1>
+
+        <div id="backgroundImgDiv">
+        </div>
+        
+        <div id="replacementDiv" height="500px">
+
+            <button id="beginDayButton" onclick="loadDay4()">please wait here for a second while things load off screen :)<br><br>CLICK TO BEGIN DAY</button>
+        </div>
+
+        <div id="loadImagesWithoutDisplaying">
+          <img src="boyCabin.png" alt="boy cabin" width="35%" >
+          <img style="width: 18%; float:left;" src="ellie.png" alt="ellie">
+          <img style="width: 18%; float:left;" src="Brittney.png" alt="Brittney">
+          <img style="width: 18%; float:left;" src="riley.png" alt="riley">
+          <img src="sarahNotes.png" alt="Sarah's notes" width="35%">
+          <img style="width: 18%; float:left;" src="oliver.png" alt="oliver">
+          <img style="width: 18%; float:left;" src="mia.png" alt="mia">
+          <img style="width: 18%; float:left;" src="grady.png" alt="Grady">
+          <img style="width: 18%; float:left;" src="me.png" alt="me">
+          <img src="noahNotes.png" alt="noah's notes" width="35%">
+          <img src="lake.png" alt="lake" width="35%">
+          <img src="shrine.png" alt="Shrine" width="35%">
+          <img src="bigBertha_Riley.png" alt="Big Bertha gets Riley" width="35%">
+          <img src="bigBertha.png" alt="Big Bertha" width="35%">
+          <img src="policeCar.png" alt="police car" width="35%">
+          <img src="noah.png" alt="noah" width="35%">
+
+        </div>
+
+        <script src = day4_setup.js></script>
+        <script src = "logout.js"></script>
+        <script src = "achievements.js"></script>
+    </body>
+</html>

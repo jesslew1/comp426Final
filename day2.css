@@ -1,0 +1,504 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}  
+
+body {
+    background-color:  rgba(86, 151, 211, 0.671);;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+p, h1, span {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+
+
+.choiceButton {
+    background-color: rgb(218, 194, 62);;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    width: 25%;
+    height: 50px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.nextButton {
+    background-color: rgb(218, 194, 62);;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    margin: 2%;
+    float: right;
+    height: 50px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.wrapper {
+    display:inline-block; 
+    width: 100%; 
+    margin: 1%;
+}
+
+.textbox_border {
+    width:80%; 
+    float: left; 
+    margin-top: 5%; 
+    padding:1%; 
+    border-radius: 10px;
+}
+
+.textbox_text {
+    background:white;  
+    padding: 2%; 
+    border-radius: 10px;
+}
+
+.nametag {
+    float: left;
+    color: white; 
+    padding: 2%; 
+    margin-right: 2%; 
+    border-radius: 4px;
+}
+
+.friendAlert {
+    bottom: 30%;     
+    left: 10%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .container .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: chartreuse;
+    width: 20px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+  }
+
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .closeButton {
+    background-color: rgb(218, 194, 62);;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    width: 60px;
+    margin: 1%;
+    float: right;
+    height: 30px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+  .fitContentChoiceButton {
+    background-color: rgb(218, 194, 62);;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    height: 50px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+
+  #skateboard {
+    bottom: 30%;     
+    left: 10%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  #soda {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .soda_btn {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#fishingRod {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .fishingRod_btn {
+    position: absolute;
+    top: 71%;
+    left: 72%;
+    background: transparent;
+    color: orangered;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.skateboard_btn {
+    position: absolute;
+    top: 55%;
+    left: 63%;
+    background: transparent;
+    color: rgb(108, 204, 236);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#theoFriendAlert {
+    bottom: 17%;     
+    left: 24%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+
+#chips {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .chips_btn {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    background: transparent;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.poster_btn {
+    position: absolute;
+    top: 40%;
+    left: 32%;
+    background: transparent;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#poster {
+    bottom: 7%;     
+    left: 76%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .poster {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    background: transparent;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#poster1 {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .poster1 {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    background: transparent;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#poster2 {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .poster2 {
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    background: transparent;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+} 
+
+#rabbit {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .rabbit_btn {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#sign {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .sign_btn {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    background: transparent;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#mushrooms {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .mushrooms_btn {
+    position: absolute;
+    top: 48%;
+    left: 60%;
+    background: transparent;
+    color: red;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#clawMarks {
+    bottom: 7%;     
+    left: 74%;
+    z-index: 3px;
+    position: absolute;
+    border-style: solid;
+    width: 100%;
+    max-width: 200px;
+    display:none;
+    background-color: rgb(255, 255, 214);
+  }
+
+  .clawMarks_btn {
+    position: absolute;
+    top: 68%;
+    left: 61%;
+    background: transparent;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    padding: 18px 24px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#loadImagesWithoutDisplaying {
+  display: none;
+}
+
+#beginDayButton {
+  background-color: rgb(218, 194, 62);;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  width: fit-content;
+  height: 500px;
+  width: 50%;
+  
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: larger;
+}
+

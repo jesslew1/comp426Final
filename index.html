@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+</head>
+<body>
+    <img src="background_main.png" alt="title page" width="800" height="600" class="center">
+    <a href="login.html" class="center">Login</a>
+    <p></p>
+    <br>
+    <a href="signup.html" class="center">Sign Up</a>
+    <p></p>
+    
+    <p></p>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyC-L0v2Rj-tXVREm5DkT7lOhvpd-Rik9aA",
+        authDomain: "choose-your-own-story-21926.firebaseapp.com",
+        databaseURL: "https://choose-your-own-story-21926.firebaseio.com",
+        projectId: "choose-your-own-story-21926",
+        storageBucket: "choose-your-own-story-21926.appspot.com",
+        messagingSenderId: "86693113915",
+        appId: "1:86693113915:web:73d733ddaa8b7555fc2c1e",
+        measurementId: "G-ZGNXL3CMTB"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    const authentication = firebase.auth();
+    const database = firebase.firestore();
+    </script>
+</body>
+
+</html>

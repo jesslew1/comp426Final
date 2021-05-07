@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page!</title>
+        <link href="login.css" type="text/css" rel="stylesheet"/>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-auth.js"></script>  
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>   
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    </head>
+    <body>
+
+        <div style="background: rgb(216, 139, 197); margin-left: 35%; margin-right: 35%; margin-top:4%; padding:1%; border-radius: 10px;">
+            <div style="background:rgb(45, 9, 204); padding:4%;  border-radius: 10px;">
+            <h1 class="center">Login Page</h1>
+            <br>
+            <div class="center">
+                <form id = "login-form">
+                    <label class="fontclass" for="username">Email: </label><br>
+                    <input type="text" id="login-email" name="username"><br>
+                    <br>
+                    <label class="fontclass" for="pw">Password:</label><br>
+                    <input type="password" id="login-password" name="pw"><br><br>
+                    <input id="submitLoginButton" type="submit" value="Submit">
+            </div>
+            <br>
+            <br>
+        </form>
+            </div>
+        </div>
+        
+
+        <script>
+            var firebaseConfig = {
+          apiKey: "AIzaSyC2A7eipZGRsxIo22mw5xMzmq25YM48H4w",
+          authDomain: "camp-northway.firebaseapp.com",
+          databaseURL: "https://camp-northway.firebaseio.com",
+          projectId: "camp-northway",
+          storageBucket: "camp-northway.appspot.com",
+          messagingSenderId: "708573748105",
+          appId: "1:708573748105:web:58c9472ff180ad88525f58",
+          measurementId: "G-R66WBWPQKM"
+        };
+        if(!firebase.apps.length){
+        firebase.initializeApp(firebaseConfig);
+        }
+        firebase.analytics();
+      
+        const authentication = firebase.auth();
+        const database = firebase.database();
+      </script>
+          <script src = "login.js"></script>
+          <script src = "logout.js"></script>
+
+    </body>
+</html>
