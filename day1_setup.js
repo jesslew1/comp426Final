@@ -125,7 +125,7 @@ function next1() {
           <div class="textbox_border" style="background: gray;">
             <span  class="nametag" style="background: gray;">noah:</span> 
               <div  class="textbox_text">
-                <p style=" margin: 15px; text-align: left;">"Hi! Ready for a week of fun! This is going to be the most funfilled week of your lives!<br>Just don't go in the Lake, because there have been a lot of bear sightings."</p>
+                <p style=" margin: 15px; text-align: left;">"Hi! Ready for a week of fun! This is going to be the most funfilled week of your lives!<br>Just don't go in the Lake, because there have been a lot of snake sightings."</p>
               </div>
           </div>
         </div>
